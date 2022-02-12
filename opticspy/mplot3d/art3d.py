@@ -20,7 +20,7 @@ from matplotlib.collections import Collection, LineCollection, \
 from matplotlib.cm import ScalarMappable
 from matplotlib.patches import Patch
 from matplotlib.colors import Normalize
-from matplotlib.cbook import iterable
+from collections import Iterable
 
 import warnings
 import numpy as np
@@ -50,7 +50,7 @@ def get_dir_vector(zdir):
         return np.array((0, 0, 1))
     elif zdir is None:
         return np.array((0, 0, 0))
-    elif iterable(zdir) and len(zdir) == 3:
+    elif isinstance(Iterable, zdir) and len(zdir) == 3:
         return zdir
     else:
         raise ValueError("'x', 'y', 'z', None or vector of length 3 expected")

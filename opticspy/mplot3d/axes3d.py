@@ -777,7 +777,6 @@ class Axes3D(Axes):
             This function was added, but not tested. Please report any bugs.
         """
 
-    @docstring.dedent_interpd
     def set_zscale(self, value, **kwargs) :
         """
         call signature::
